@@ -12,6 +12,7 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { toast } from "@/components/ui/use-toast"
 import { Mail, Phone, MapPin, Send, Loader2 } from "lucide-react"
+import { submitContactForm, type ContactFormData } from "./actions"
 
 const formSchema = z.object({
   nombre: z.string().min(2, {
@@ -52,21 +53,25 @@ export default function ContactoPage() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true)
 
-    // Simulando envío a la base de datos
     try {
-      // Aquí iría la lógica para enviar a la base de datos
-      console.log(values)
+      // Enviar datos a Supabase usando la acción del servidor
+      const result = await submitContactForm(values as ContactFormData)
 
-      // Simulamos un retraso para mostrar el estado de carga
-      await new Promise((resolve) => setTimeout(resolve, 1500))
-
-      toast({
-        title: "Formulario enviado",
-        description: "Hemos recibido tu mensaje. Nos pondremos en contacto contigo pronto.",
-      })
-
-      form.reset()
+      if (result.success) {
+        toast({
+          title: "Formulario enviado",
+          description: result.message,
+        })
+        form.reset()
+      } else {
+        toast({
+          title: "Error al enviar",
+          description: result.message,
+          variant: "destructive",
+        })
+      }
     } catch (error) {
+      console.error("Error al enviar el formulario:", error)
       toast({
         title: "Error al enviar",
         description: "Hubo un problema al enviar tu mensaje. Por favor intenta de nuevo.",
