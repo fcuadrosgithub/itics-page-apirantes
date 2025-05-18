@@ -10,8 +10,10 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "ITSOEH - Instituto Tecnológico Superior del Occidente del Estado de Hidalgo",
   description: "Sitio oficial del Instituto Tecnológico Superior del Occidente del Estado de Hidalgo",
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
+
+const currentYear = new Date().getFullYear()
 
 export default function RootLayout({
   children,
@@ -27,7 +29,7 @@ export default function RootLayout({
             <main className="flex-1">{children}</main>
             <footer className="bg-primary py-6 text-primary-foreground">
               <div className="container text-center">
-                <p>© {new Date().getFullYear()} Instituto Tecnológico Superior del Occidente del Estado de Hidalgo</p>
+                <p>© {currentYear} Instituto Tecnológico Superior del Occidente del Estado de Hidalgo</p>
               </div>
             </footer>
           </div>
