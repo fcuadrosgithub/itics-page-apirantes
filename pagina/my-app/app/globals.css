@@ -49,71 +49,71 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0); /* Fondo claro */
-  --foreground: oklch(0.145 0 0); /* Texto claro */
-  --card: oklch(1 0 0); /* Color de tarjeta */
-  --card-foreground: oklch(0.145 0 0); /* Texto en tarjeta */
-  --popover: oklch(1 0 0); /* Color del popover */
-  --popover-foreground: oklch(0.145 0 0); /* Texto en popover */
-  --primary: oklch(0.9 0.3 0.5); /* Color primario rosa */
-  --primary-foreground: oklch(0.985 0 0); /* Texto primario */
-  --secondary: oklch(0.97 0 0); /* Color secundario */
-  --secondary-foreground: oklch(0.205 0 0); /* Texto secundario */
-  --muted: oklch(0.97 0 0); /* Color apagado */
-  --muted-foreground: oklch(0.556 0 0); /* Texto apagado */
-  --accent: oklch(0.97 0 0); /* Color de acento */
-  --accent-foreground: oklch(0.205 0 0); /* Texto de acento */
-  --destructive: oklch(0.577 0.245 27.325); /* Color destructivo */
-  --border: oklch(0.922 0 0); /* Color del borde */
-  --input: oklch(0.922 0 0); /* Color de entrada */
-  --ring: oklch(0.708 0 0); /* Color del anillo */
-  --chart-1: oklch(0.646 0.222 41.116); /* Color gráfico 1 */
-  --chart-2: oklch(0.6 0.118 184.704); /* Color gráfico 2 */
-  --chart-3: oklch(0.398 0.07 227.392); /* Color gráfico 3 */
-  --chart-4: oklch(0.828 0.189 84.429); /* Color gráfico 4 */
-  --chart-5: oklch(0.769 0.188 70.08); /* Color gráfico 5 */
-  --sidebar: oklch(0.985 0 0); /* Color de la barra lateral */
-  --sidebar-foreground: oklch(0.145 0 0); /* Texto en la barra lateral */
-  --sidebar-primary: oklch(0.205 0 0); /* Color primario de la barra lateral */
-  --sidebar-primary-foreground: oklch(0.985 0 0); /* Texto primario en la barra lateral */
-  --sidebar-accent: oklch(0.97 0 0); /* Color de acento en la barra lateral */
-  --sidebar-accent-foreground: oklch(0.205 0 0); /* Texto de acento en la barra lateral */
-  --sidebar-border: oklch(0.922 0 0); /* Borde de la barra lateral */
-  --sidebar-ring: oklch(0.708 0 0); /* Anillo de la barra lateral */
+  --background: #ffffff;
+  --foreground: #000000;
+  --card: #ffffff;
+  --card-foreground: #000000;
+  --popover: #ffffff;
+  --popover-foreground: #000000;
+  --primary: #2563eb;
+  --primary-foreground: #ffffff;
+  --secondary: #e0e7ff;
+  --secondary-foreground: #1e40af;
+  --muted: #f0f4ff;
+  --muted-foreground: #3b82f6;
+  --accent: #bfdbfe;
+  --accent-foreground: #1e3a8a;
+  --destructive: #dc2626;
+  --border: #e5e7eb;
+  --input: #e5e7eb;
+  --ring: #3b82f6;
+  --chart-1: #3b82f6;
+  --chart-2: #2563eb;
+  --chart-3: #1e40af;
+  --chart-4: #93c5fd;
+  --chart-5: #60a5fa;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #000000;
+  --sidebar-primary: #2563eb;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #3b82f6;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #e5e7eb;
+  --sidebar-ring: #2563eb;
 }
 
 .dark {
-  --background: oklch(0.145 0 0); /* Fondo oscuro */
-  --foreground: oklch(0.985 0 0); /* Texto oscuro */
-  --card: oklch(0.205 0 0); /* Color de tarjeta oscuro */
-  --card-foreground: oklch(0.985 0 0); /* Texto en tarjeta oscuro */
-  --popover: oklch(0.205 0 0); /* Color del popover oscuro */
-  --popover-foreground: oklch(0.985 0 0); /* Texto en popover oscuro */
-  --primary: oklch(0.9 0.3 0.5); /* Color primario rosa en modo oscuro */
-  --primary-foreground: oklch(0.205 0 0); /* Texto primario oscuro */
-  --secondary: oklch(0.269 0 0); /* Color secundario oscuro */
-  --secondary-foreground: oklch(0.985 0 0); /* Texto secundario oscuro */
-  --muted: oklch(0.269 0 0); /* Color apagado oscuro */
-  --muted-foreground: oklch(0.708 0 0); /* Texto apagado oscuro */
-  --accent: oklch(0.269 0 0); /* Color de acento oscuro */
-  --accent-foreground: oklch(0.985 0 0); /* Texto de acento oscuro */
-  --destructive: oklch(0.704 0.191 22.216); /* Color destructivo oscuro */
-  --border: oklch(1 0 0 / 10%); /* Borde oscuro */
-  --input: oklch(1 0 0 / 15%); /* Entrada oscura */
-  --ring: oklch(0.556 0 0); /* Anillo oscuro */
-  --chart-1: oklch(0.488 0.243 264.376); /* Color gráfico 1 oscuro */
-  --chart-2: oklch(0.696 0.17 162.48); /* Color gráfico 2 oscuro */
-  --chart-3: oklch(0.769 0.188 70.08); /* Color gráfico 3 oscuro */
-  --chart-4: oklch(0.627 0.265 303.9); /* Color gráfico 4 oscuro */
-  --chart-5: oklch(0.645 0.246 16.439); /* Color gráfico 5 oscuro */
-  --sidebar: oklch(0.205 0 0); /* Barra lateral oscura */
-  --sidebar-foreground: oklch(0.985 0 0); /* Texto en barra lateral oscura */
-  --sidebar-primary: oklch(0.488 0.243 264.376); /* Color primario barra lateral oscura */
-  --sidebar-primary-foreground: oklch(0.985 0 0); /* Texto primario barra lateral oscura */
-  --sidebar-accent: oklch(0.269 0 0); /* Color de acento barra lateral oscura */
-  --sidebar-accent-foreground: oklch(0.985 0 0); /* Texto de acento barra lateral oscura */
-  --sidebar-border: oklch(1 0 0 / 10%); /* Borde barra lateral oscura */
-  --sidebar-ring: oklch(0.556 0 0); /* Anillo barra lateral oscura */
+  --background: #000000;
+  --foreground: #ffffff; /* texto blanco puro */
+  --card: #1f2937;
+  --card-foreground: #ffffff; /* texto blanco puro */
+  --popover: #1f2937;
+  --popover-foreground: #ffffff; /* texto blanco puro */
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+  --secondary: #2563eb;
+  --secondary-foreground: #ffffff; /* texto blanco puro */
+  --muted: #374151;
+  --muted-foreground: #ffffff; /* texto blanco puro */
+  --accent: #2563eb;
+  --accent-foreground: #ffffff; /* texto blanco puro */
+  --destructive: #b91c1c;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.15);
+  --ring: #3b82f6;
+  --chart-1: #3b82f6;
+  --chart-2: #2563eb;
+  --chart-3: #60a5fa;
+  --chart-4: #1e40af;
+  --chart-5: #2563eb;
+  --sidebar: #111827;
+  --sidebar-foreground: #ffffff; /* texto blanco puro */
+  --sidebar-primary: #3b82f6;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #2563eb;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: #3b82f6;
 }
 
 @layer base {

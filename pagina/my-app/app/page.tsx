@@ -1,153 +1,83 @@
-import Link from "next/link"
-import { ChevronRight } from "lucide-react"
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col">
-      {/* Header - Azul vibrante (#1E88E5) */}
-      <header className="bg-[#1E88E5] text-white">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center mb-4 md:mb-0">
-              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mr-4">
-                <span className="text-[#1E88E5] font-bold text-2xl">TECNM</span>
-              </div>
-              <h1 className="text-2xl font-bold">Tecnológico Nacional de México</h1>
+    <div className="min-h-screen bg-background text-foreground">
+      {/* Sección bienvenida */}
+      <section className="bg-[#003865] text-white py-20 px-6 text-center">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">Bienvenido al ITSOEH</h1>
+        <p className="text-lg md:text-xl max-w-2xl mx-auto">
+          Tecnológico Nacional de México Campus Huejutla – Formando profesionistas comprometidos con el desarrollo tecnológico y social del país.
+        </p>
+      </section>
+
+      {/* Acerca de */}
+      <section className="py-16 px-6 max-w-5xl mx-auto text-center">
+        <h2 className="text-3xl font-semibold mb-6">¿Quiénes somos?</h2>
+        <p className="text-lg text-gray-700 dark:text-gray-300">
+          El Instituto Tecnológico Superior del Oriente del Estado de Hidalgo es una institución pública de educación superior
+          dedicada a la formación de ingenieros e ingenieras altamente capacitados en áreas clave del conocimiento,
+          promoviendo la innovación, el emprendimiento y el compromiso con la sociedad.
+        </p>
+      </section>
+
+      {/* Oferta académica */}
+      <section className="bg-[#F4F6F8] dark:bg-[#1F2937] py-16 px-6">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl font-semibold mb-8">Oferta Académica</h2>
+          <div className="grid gap-6 md:grid-cols-3 text-left">
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition">
+              <h3 className="text-xl font-semibold mb-2">Ingeniería en Sistemas Computacionales</h3>
+              <p>Enfocada en el diseño, desarrollo y mantenimiento de software y sistemas informáticos.</p>
             </div>
-            <nav className="flex flex-wrap justify-center gap-4">
-              <Link href="/" className="hover:underline font-medium hover:text-blue-100 transition">
-                Inicio
-              </Link>
-              <Link href="/alumnos" className="hover:underline font-medium hover:text-blue-100 transition">
-                Alumnos
-              </Link>
-              <Link href="/docentes" className="hover:underline font-medium hover:text-blue-100 transition">
-                Docentes
-              </Link>
-              <Link href="/aspirantes" className="hover:underline font-medium hover:text-blue-100 transition">
-                Aspirantes
-              </Link>
-              <Link href="/publico" className="hover:underline font-medium hover:text-blue-100 transition">
-                Público en General
-              </Link>
-            </nav>
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition">
+              <h3 className="text-xl font-semibold mb-2">Ingeniería Industrial</h3>
+              <p>Optimización de procesos productivos, gestión de calidad y mejora continua en industrias.</p>
+            </div>
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition">
+              <h3 className="text-xl font-semibold mb-2">Ingeniería en Gestión Empresarial</h3>
+              <p>Formación en administración, finanzas y liderazgo con visión estratégica.</p>
+            </div>
           </div>
         </div>
-      </header>
+      </section>
 
-      <main className="flex-1">
-        {/* Hero Section - Azul cielo (#42A5F5) */}
-        <section className="bg-[#42A5F5] text-white py-20">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold mb-4">Bienvenidos al Tecnológico Nacional de México</h2>
-            <p className="text-xl max-w-3xl mx-auto mb-8">
-              Formando profesionales comprometidos con el desarrollo de México
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                href="/aspirantes"
-                className="bg-white text-[#1E88E5] px-6 py-3 rounded-md font-bold hover:bg-blue-50 transition shadow-md"
-              >
-                Información para Aspirantes
-              </Link>
-              <Link
-                href="/oferta-academica"
-                className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-md font-bold hover:bg-white/20 transition"
-              >
-                Oferta Académica
-              </Link>
-            </div>
-          </div>
-        </section>
+      {/* Noticias (simuladas) */}
+      <section className="py-16 px-6 max-w-5xl mx-auto text-center">
+        <h2 className="text-3xl font-semibold mb-6">Noticias Recientes</h2>
+        <ul className="space-y-4 text-left">
+          <li className="border-l-4 border-blue-600 pl-4">
+            <span className="font-semibold">15 de mayo 2025:</span> Ceremonia del Día del Maestro y entrega de reconocimientos a docentes.
+          </li>
+          <li className="border-l-4 border-blue-600 pl-4">
+            <span className="font-semibold">10 de mayo 2025:</span> ITSOEH obtiene reconocimiento por su participación en el Evento Nacional Estudiantil de Innovación Tecnológica.
+          </li>
+        </ul>
+      </section>
 
-        {/* Accesos Directos - Fondo azul claro (#E3F2FD) */}
-        <section className="py-16 bg-[#E3F2FD]">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12 text-[#1E88E5]">Accesos Directos</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <Link href="/alumnos" className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition hover:border-[#90CAF9] border-2 border-transparent">
-                <h3 className="text-xl font-bold text-[#1E88E5] mb-2">Alumnos</h3>
-                <p className="text-gray-600 mb-4">
-                  Accede a información académica, horarios y servicios estudiantiles.
-                </p>
-                <div className="flex items-center text-[#42A5F5] font-medium">
-                  <span>Ingresar</span>
-                  <ChevronRight className="ml-1 h-4 w-4" />
-                </div>
-              </Link>
-              <Link href="/docentes" className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition hover:border-[#90CAF9] border-2 border-transparent">
-                <h3 className="text-xl font-bold text-[#1E88E5] mb-2">Docentes</h3>
-                <p className="text-gray-600 mb-4">Portal para profesores, recursos didácticos y gestión académica.</p>
-                <div className="flex items-center text-[#42A5F5] font-medium">
-                  <span>Ingresar</span>
-                  <ChevronRight className="ml-1 h-4 w-4" />
-                </div>
-              </Link>
-              <Link
-                href="/aspirantes"
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition border-2 border-[#42A5F5] hover:border-[#1E88E5]"
-              >
-                <h3 className="text-xl font-bold text-[#1E88E5] mb-2">Aspirantes</h3>
-                <p className="text-gray-600 mb-4">Información sobre admisión, carreras y proceso de inscripción.</p>
-                <div className="flex items-center text-[#42A5F5] font-medium">
-                  <span>Ingresar</span>
-                  <ChevronRight className="ml-1 h-4 w-4" />
-                </div>
-              </Link>
-              <Link href="/publico" className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition hover:border-[#90CAF9] border-2 border-transparent">
-                <h3 className="text-xl font-bold text-[#1E88E5] mb-2">Público en General</h3>
-                <p className="text-gray-600 mb-4">Eventos, noticias y servicios para la comunidad.</p>
-                <div className="flex items-center text-[#42A5F5] font-medium">
-                  <span>Ingresar</span>
-                  <ChevronRight className="ml-1 h-4 w-4" />
-                </div>
-              </Link>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      {/* Footer - Mismo azul que el header (#1E88E5) */}
-      <footer className="bg-[#1E88E5] text-white py-8">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">Tecnológico Nacional de México</h3>
-              <p>Av. Universidad 123, Col. Centro</p>
-              <p>Ciudad de México, México</p>
-              <p>CP 12345</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-4">Contacto</h3>
-              <p>Teléfono: (55) 1234-5678</p>
-              <p>Email: contacto@tecnm.edu.mx</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-4">Enlaces Rápidos</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/directorio" className="hover:text-blue-200 transition">
-                    Directorio
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/mapa" className="hover:text-blue-200 transition">
-                    Mapa del Campus
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/calendario" className="hover:text-blue-200 transition">
-                    Calendario Académico
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-blue-400 mt-8 pt-8 text-center">
-            <p>© {new Date().getFullYear()} Tecnológico Nacional de México. Todos los derechos reservados.</p>
-          </div>
+      {/* Accesos rápidos */}
+      <section className="py-16 bg-[#E5E7EB] dark:bg-gray-900 text-center px-6">
+        <h2 className="text-2xl font-semibold mb-4">Accesos rápidos</h2>
+        <div className="flex flex-wrap justify-center gap-4 mt-6">
+          <Link href="/alumnos" className="bg-[#005EB8] hover:bg-[#004a94] text-white px-6 py-3 rounded-xl transition">
+            Alumnos
+          </Link>
+          <Link href="/docentes" className="bg-[#005EB8] hover:bg-[#004a94] text-white px-6 py-3 rounded-xl transition">
+            Docentes
+          </Link>
+          <Link href="/aspirantes" className="bg-[#005EB8] hover:bg-[#004a94] text-white px-6 py-3 rounded-xl transition">
+            Aspirantes
+          </Link>
+          <Link href="/publico" className="bg-[#005EB8] hover:bg-[#004a94] text-white px-6 py-3 rounded-xl transition">
+            Público
+          </Link>
         </div>
-      </footer>
+      </section>
+
+      {/* Frase institucional */}
+      <section className="py-10 text-center text-gray-600 dark:text-gray-300 text-lg italic px-6">
+        “Excelencia académica con compromiso social”
+      </section>
     </div>
-  )
+  );
 }
