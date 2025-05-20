@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TICs - Aspirantes</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Tecnologías de la Información y Comunicación</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#aspirantes">Aspirantes</a></li>
+                <!-- Añade más enlaces según necesites -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="aspirantes" class="aspirantes-section">
+            <h2>Información para Aspirantes</h2>
+            
+            <!-- Área de trabajo -->
+            <div class="info-card">
+                <h3>Área de Trabajo</h3>
+                <p>Los egresados de TICs pueden trabajar en:</p>
+                <ul>
+                    <li>Desarrollo de software</li>
+                    <li>Administración de redes</li>
+                    <li>Ciberseguridad</li>
+                    <li>Análisis de datos</li>
+                    <li>Inteligencia artificial</li>
+                </ul>
+            </div>
+            
+            <!-- Especialización -->
+            <div class="info-card">
+                <h3>Especialización</h3>
+                <p>Puedes especializarte en:</p>
+                <ul>
+                    <li>Desarrollo web full-stack</li>
+                    <li>Desarrollo móvil</li>
+                    <li>Cloud computing</li>
+                    <li>Machine Learning</li>
+                    <li>Blockchain</li>
+                </ul>
+            </div>
+            
+            <!-- Plan de estudios -->
+            <div class="info-card">
+                <h3>Plan de Estudios</h3>
+                <p>Consulta nuestras retículas:</p>
+                <button id="showPlanBtn">Ver Plan de Estudios</button>
+                <div id="planContent" class="hidden-content">
+                    <h4>Primer Semestre</h4>
+                    <ul>
+                        <li>Matemáticas Discretas</li>
+                        <li>Fundamentos de Programación</li>
+                        <li>Arquitectura de Computadoras</li>
+                    </ul>
+                    <h4>Segundo Semestre</h4>
+                    <ul>
+                        <li>Sistemas Operativos I</li>
+                        <li>Álgebra Lineal</li>
+                        <li>Fundamentos de Bases de Datos</li>
+                    </ul>
+                    <h4>Tercer Semestre</h4>
+                    <ul>
+                        <li>Programación Orientada a Objetos</li>
+                        <li>Redes de Computadora</li>
+                        <li>Matemáticas Aplicadas a Comunicaciones</li>
+                    </ul>
+                    <!-- Continúa con los demás semestres según sea necesario -->
+                </div>
+            </div>
+            
+            <!-- Fechas y requisitos -->
+            <div class="info-card">
+                <h3>Admisiones</h3>
+                <div class="admission-info">
+                    <h4>Precio</h4>
+                    <p>$XXXX por semestre</p>
+                    
+                    <h4>Procedimiento</h4>
+                    <ol>
+                        <li>Registro en línea</li>
+                        <li>Presentación de examen</li>
+                        <li>Entrevista</li>
+                        <li>Resultados</li>
+                    </ol>
+                    
+                    <h4>Requisitos</h4>
+                    <ul>
+                        <li>Certificado de bachillerato</li>
+                        <li>Acta de nacimiento</li>
+                        <li>CURP</li>
+                        <li>4 fotografías tamaño infantil</li>
+                    </ul>
+                    
+                    <h4>Fechas de examen</h4>
+                    <p>Próxima fecha: DD/MM/AAAA</p>
+                </div>
+            </div>
+            
+            <!-- Contacto -->
+            <div class="info-card contact-card">
+                <h3>Contacto</h3>
+                <p>¿Tienes dudas? Contáctanos:</p>
+                <ul>
+                    <li>Teléfono: <a href="tel:+521234567890">12-34-56-78-90</a></li>
+                    <li>Email: <a href="mailto:admisiones@tics.edu.mx">admisiones@tics.edu.mx</a></li>
+                    <li>Horario de atención: Lunes a Viernes de 9:00 a 18:00 hrs</li>
+                </ul>
+                <button id="contactFormBtn">Abrir formulario de contacto</button>
+                
+                <div id="contactForm" class="hidden-content">
+                    <form>
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="question">Pregunta:</label>
+                        <textarea id="question" name="question" required></textarea>
+                        
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Universidad TICs. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
