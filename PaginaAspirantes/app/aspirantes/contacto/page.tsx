@@ -24,9 +24,13 @@ const formSchema = z.object({
   email: z.string().email({
     message: "Por favor ingresa un correo electrónico válido.",
   }),
-  telefono: z.string().min(10, {
-    message: "El teléfono debe tener al menos 10 dígitos.",
-  }),
+  telefono: z.string()
+    .regex(/^\d+$/, {
+      message: "El teléfono debe contener números.",
+    })
+    .min(10, {
+      message: "El teléfono debe tener al menos 10 dígitos.",
+    }),
   carreraInteres: z.string({
     required_error: "Por favor selecciona una carrera de interés.",
   }),
@@ -54,7 +58,6 @@ export default function ContactoPage() {
     setIsSubmitting(true)
 
     try {
-      // Enviar datos a Supabase usando la acción del servidor
       const result = await submitContactForm(values as ContactFormData)
 
       if (result.success) {
@@ -152,7 +155,15 @@ export default function ContactoPage() {
                         <FormItem>
                           <FormLabel>Teléfono</FormLabel>
                           <FormControl>
-                            <Input placeholder="10 dígitos" {...field} />
+                            <Input
+                              placeholder="10 dígitos"
+                              {...field}
+                              onKeyPress={(e) => {
+                                if (!/[0-9]/.test(e.key)) {
+                                  e.preventDefault();
+                                }
+                              }}
+                            />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -173,17 +184,14 @@ export default function ContactoPage() {
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
-                            <SelectItem value="civil">Ingeniería Civil</SelectItem>
-                            <SelectItem value="industrial">Ingeniería Industrial</SelectItem>
-                            <SelectItem value="alimentarias">Ingeniería en Industrias Alimentarias</SelectItem>
-                            <SelectItem value="electromecanica">Ingeniería en Electromecánica</SelectItem>
-                            <SelectItem value="sistemas">Ingeniería en Sistemas Computacionales</SelectItem>
-                            <SelectItem value="gestion">Ingeniería en Gestión Empresarial</SelectItem>
-                            <SelectItem value="arquitectura">Arquitectura</SelectItem>
-                            <SelectItem value="tic">
-                              Ingeniería en Tecnologías de la Información y Comunicaciones
-                            </SelectItem>
-                            <SelectItem value="logistica">Ingeniería en Logística</SelectItem>
+                            <SelectItem value="redes">Redes y Telecomunicaciones</SelectItem>
+                            <SelectItem value="software">Desarrollo de Software</SelectItem>
+                            <SelectItem value="iot">Internet de las Cosas (IoT)</SelectItem>
+                            <SelectItem value="seguridad">Ciberseguridad</SelectItem>
+                            <SelectItem value="basesdatos">Bases de Datos</SelectItem>
+                            <SelectItem value="sistemas">Sistemas Computacionales</SelectItem>
+                            <SelectItem value="cloud">Computación en la Nube</SelectItem>
+                            <SelectItem value="embebidos">Sistemas Embebidos</SelectItem>
                           </SelectContent>
                         </Select>
                         <FormMessage />
@@ -253,9 +261,7 @@ export default function ContactoPage() {
                 <div>
                   <p className="font-medium">Teléfonos</p>
                   <p className="text-sm text-muted-foreground">
-                    (738) 725 1076
-                    <br />
-                    (738) 725 1077
+                    73873-54000 ext. 631, 632, 633 y 634.
                   </p>
                 </div>
               </div>
@@ -265,9 +271,7 @@ export default function ContactoPage() {
                 <div>
                   <p className="font-medium">Correo Electrónico</p>
                   <p className="text-sm text-muted-foreground">
-                    admisiones@itsoeh.edu.mx
-                    <br />
-                    informes@itsoeh.edu.mx
+                    fichas@itsoeh.edu.mx
                   </p>
                 </div>
               </div>
@@ -277,7 +281,7 @@ export default function ContactoPage() {
                 <p className="text-sm text-muted-foreground">
                   Lunes a Viernes
                   <br />
-                  9:00 a 16:00 hrs.
+                  8:30 a 16:30 hrs.
                 </p>
               </div>
 
@@ -354,11 +358,6 @@ export default function ContactoPage() {
                 </div>
               </div>
             </CardContent>
-            <CardFooter>
-              <Button variant="outline" className="w-full">
-                Ver ubicación en mapa
-              </Button>
-            </CardFooter>
           </Card>
         </div>
       </div>

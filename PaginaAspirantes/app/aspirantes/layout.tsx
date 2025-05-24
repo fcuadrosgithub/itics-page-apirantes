@@ -22,7 +22,7 @@ export default function AspirantesLayout({
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-4">Aspirantes</h1>
         <p className="text-muted-foreground max-w-3xl">
-          Bienvenido a la sección de aspirantes del Instituto Tecnológico Superior del Occidente del Estado de Hidalgo.
+          Bienvenido a la sección de aspirantes del la carrera de Ingeniería en Tecnologías de la Información y Comunicaciones.
           Aquí encontrarás toda la información necesaria para iniciar tu proceso de admisión.
         </p>
         {/* Link de regreso al inicio */}

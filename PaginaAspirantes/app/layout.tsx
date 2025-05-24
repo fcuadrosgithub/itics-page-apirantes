@@ -13,7 +13,8 @@ export const metadata: Metadata = {
   generator: "v0.dev",
 }
 
-const currentYear = new Date().getFullYear()
+// Opción segura: valor estático
+const currentYear = 2025
 
 export default function RootLayout({
   children,
@@ -21,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light">
           <div className="flex min-h-screen flex-col">

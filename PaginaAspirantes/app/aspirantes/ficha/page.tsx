@@ -17,14 +17,14 @@ export default function FichaPage() {
         <AlertCircle className="h-4 w-4" />
         <AlertTitle>Convocatoria abierta</AlertTitle>
         <AlertDescription>
-          El proceso de admisión para el semestre Agosto-Diciembre 2024 ya está abierto. Fecha límite para solicitar
-          ficha: 15 de julio de 2024.
+          El proceso de admisión para el semestre Agosto-Diciembre 2025 ya está abierto. Fecha límite para solicitar
+          ficha: 6 de junio de 2025.
         </AlertDescription>
       </Alert>
 
       <Tabs defaultValue="precio" className="w-full">
         <TabsList className="grid w-full md:w-auto grid-cols-2 md:grid-cols-4">
-          <TabsTrigger value="precio">Precio</TabsTrigger>
+          <TabsTrigger value="precio">Pago</TabsTrigger>
           <TabsTrigger value="procedimiento">Procedimiento</TabsTrigger>
           <TabsTrigger value="requisitos">Requisitos</TabsTrigger>
           <TabsTrigger value="examen">Examen</TabsTrigger>
@@ -41,12 +41,10 @@ export default function FichaPage() {
             <CardContent className="space-y-4">
               <div className="rounded-lg border p-4">
                 <h3 className="text-lg font-semibold mb-2">Ficha de Admisión</h3>
-                <p className="text-3xl font-bold text-primary mb-2">$850.00 MXN</p>
+                <p className="text-3xl font-bold text-primary mb-2">$628.00 MXN</p>
                 <p className="text-sm text-muted-foreground">El pago de la ficha incluye:</p>
                 <ul className="list-disc pl-5 mt-2 space-y-1">
                   <li>Derecho a examen de admisión</li>
-                  <li>Curso de inducción</li>
-                  <li>Material informativo</li>
                 </ul>
               </div>
 
@@ -60,7 +58,7 @@ export default function FichaPage() {
                       <p className="text-sm text-muted-foreground">
                         Banco: BBVA Bancomer
                         <br />
-                        Cuenta: 0123456789
+                        Cuenta: 001667645
                         <br />A nombre de: Instituto Tecnológico Superior del Occidente del Estado de Hidalgo
                       </p>
                     </div>
@@ -70,7 +68,7 @@ export default function FichaPage() {
                     <div>
                       <p className="font-medium">Transferencia electrónica</p>
                       <p className="text-sm text-muted-foreground">
-                        CLABE: 012290001234567890
+                        CLABE: Tu Referencia
                         <br />
                         Referencia: Tu CURP
                       </p>
@@ -81,9 +79,9 @@ export default function FichaPage() {
                     <div>
                       <p className="font-medium">Pago en caja del instituto</p>
                       <p className="text-sm text-muted-foreground">
-                        Horario: Lunes a viernes de 9:00 a 16:00 hrs
+                        Horario: Lunes a viernes de 8:30 a 16:30 hrs
                         <br />
-                        Ubicación: Edificio A, planta baja
+                        Ubicación: Departamento de Control Escolar, Edificio Central.
                       </p>
                     </div>
                   </li>
@@ -97,12 +95,6 @@ export default function FichaPage() {
                     <div>
                       <p className="font-medium">Inscripción semestral</p>
                       <p className="text-sm text-muted-foreground">$1,800.00 MXN</p>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div>
-                      <p className="font-medium">Credencial</p>
-                      <p className="text-sm text-muted-foreground">$120.00 MXN</p>
                     </div>
                   </li>
                 </ul>
@@ -131,11 +123,8 @@ export default function FichaPage() {
                   </div>
                   <h3 className="text-lg font-semibold mb-1">Pre-registro en línea</h3>
                   <p className="text-muted-foreground mb-2">
-                    Completa el formulario de pre-registro en el sistema de admisiones.
+                    Completa el formulario de pre-registro en la página principal ITSOEH que se encuentra en la convocatoria..
                   </p>
-                  <Button variant="outline" className="mt-2">
-                    Ir al sistema de pre-registro
-                  </Button>
                 </li>
 
                 <li className="border-l-2 border-primary pl-6 pb-6 relative">
@@ -158,10 +147,10 @@ export default function FichaPage() {
                   </div>
                   <h3 className="text-lg font-semibold mb-1">Entrega de documentación</h3>
                   <p className="text-muted-foreground mb-2">
-                    Acude al Departamento de Servicios Escolares con tu documentación completa y comprobante de pago.
+                    Acude al Departamento de Control Escolar con tu documentación completa y comprobante de pago.
                   </p>
                   <p className="text-sm">
-                    <strong>Horario de atención:</strong> Lunes a viernes de 9:00 a 16:00 hrs.
+                    <strong>Horario de atención:</strong> Lunes a viernes de 8:30 a 16:30 hrs.
                   </p>
                 </li>
 
@@ -179,13 +168,12 @@ export default function FichaPage() {
                   <div className="absolute -left-3 top-0 bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center">
                     5
                   </div>
-                  <h3 className="text-lg font-semibold mb-1">Presenta el examen</h3>
+                  <h3 className="text-lg font-semibold mb-1">Presenta el examen en Línea</h3>
                   <p className="text-muted-foreground mb-2">
-                    Acude puntualmente a la aplicación del examen de admisión en la fecha indicada.
+                    Conéctate puntualmente a la aplicación del examen de admisión en la fecha indicada.
                   </p>
                   <p className="text-sm bg-muted p-2 rounded">
-                    <strong>Recomendación:</strong> Llega 30 minutos antes de la hora programada y lleva lápiz #2,
-                    borrador y calculadora básica.
+                    <strong>Recomendación:</strong> Prepárate 15 minutos antes de la hora programada y ten a mano lápiz, borrador y calculadora básica.
                   </p>
                 </li>
 
@@ -195,10 +183,10 @@ export default function FichaPage() {
                   </div>
                   <h3 className="text-lg font-semibold mb-1">Consulta resultados</h3>
                   <p className="text-muted-foreground mb-2">
-                    Los resultados se publicarán en la página web institucional y en las instalaciones del instituto.
+                    Se anunciará a través de la página oficial del ITSOEH y sus redes sociales institucionales.
                   </p>
                   <p className="text-sm">
-                    <strong>Fecha de publicación:</strong> 25 de julio de 2024.
+                    <strong>Fecha de publicación:</strong> 25 de junio de 2025.
                   </p>
                 </li>
               </ol>
@@ -224,7 +212,7 @@ export default function FichaPage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
-                    <span>Comprobante de pago original</span>
+                    <span>Acta de Nacimiento</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
@@ -236,7 +224,7 @@ export default function FichaPage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
-                    <span>2 fotografías tamaño infantil a color (recientes)</span>
+                    <span>1 fotografía tamaño infantil a color (recientes)</span>
                   </li>
                 </ul>
               </div>
@@ -246,31 +234,27 @@ export default function FichaPage() {
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
-                    <span>Certificado de bachillerato (original y copia)</span>
+                    <span>Certificado o constancia de estudios de bachillerato donde especifique promedio mínimo de 7.0 (escaneado en formato PDF)</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
-                    <span>Acta de nacimiento (original y copia)</span>
+                    <span>Acta de nacimiento (escaneada en formato PDF)</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
-                    <span>CURP actualizada (formato reciente)</span>
+                    <span>CURP (emitido por la RENAPO, escaneado en formato PDF)</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
-                    <span>Comprobante de domicilio reciente (no mayor a 3 meses)</span>
+                    <span>Contar con correo electrónico con dominio gmail</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
-                    <span>6 fotografías tamaño infantil a color (fondo blanco, ropa formal)</span>
+                    <span>Fotografía tamaño infantil en formato digital .jpg</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
-                    <span>Certificado médico expedido por institución pública (IMSS, ISSSTE, SSA)</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
-                    <span>Comprobante de pago de inscripción</span>
+                    <span>Estudiantes extranjeros deberán tramitar su certificado de estudios revalidados en la Subsecretaría de Educación Media Superior y Superior, ubicada en Circuito Ex Hacienda de la Concepción, Lote 17, San Juan Tilcuautla, Municipio de San Agustín Tlaxiaca, Hidalgo.</span>
                   </li>
                 </ul>
               </div>
@@ -293,17 +277,20 @@ export default function FichaPage() {
               <CardTitle className="flex items-center gap-2">
                 <Calendar className="h-5 w-5" /> Examen de Admisión
               </CardTitle>
-              <CardDescription>Información sobre el examen de admisión, fechas y guía de estudio.</CardDescription>
+              <CardDescription>Información sobre el examen de admisión, fechas y recomendaciones.</CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
               <div>
-                <h3 className="text-lg font-semibold mb-3">Fechas de aplicación</h3>
+                <h3 className="text-lg font-semibold mb-3">Fechas importantes</h3>
                 <div className="rounded-lg border p-4">
-                  <p className="font-medium">Primera aplicación:</p>
-                  <p className="text-muted-foreground mb-2">15 de junio de 2024, 9:00 hrs.</p>
+                  <p className="font-medium">Solicitud de fichas:</p>
+                  <p className="text-muted-foreground mb-2">Del 10 de febrero al 06 de junio de 2025</p>
 
-                  <p className="font-medium mt-4">Segunda aplicación:</p>
-                  <p className="text-muted-foreground mb-2">13 de julio de 2024, 9:00 hrs.</p>
+                  <p className="font-medium mt-4">Evaluación diagnóstica en línea:</p>
+                  <p className="text-muted-foreground mb-2">20 de junio de 2025</p>
+
+                  <p className="font-medium mt-4">Publicación de resultados:</p>
+                  <p className="text-muted-foreground mb-2">25 de junio de 2025</p>
 
                   <p className="text-sm bg-muted p-2 rounded mt-4">
                     <strong>Nota:</strong> La fecha de tu examen será asignada al momento de recibir tu ficha.
@@ -319,7 +306,7 @@ export default function FichaPage() {
                     <div>
                       <p className="font-medium">Tipo de examen</p>
                       <p className="text-sm text-muted-foreground">
-                        EXANI-II de CENEVAL (Examen Nacional de Ingreso a la Educación Superior)
+                        EVALUATEC (Evaluación Diagnóstica)
                       </p>
                     </div>
                   </li>
@@ -327,7 +314,7 @@ export default function FichaPage() {
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
                     <div>
                       <p className="font-medium">Duración</p>
-                      <p className="text-sm text-muted-foreground">4 horas aproximadamente</p>
+                      <p className="text-sm text-muted-foreground">3 horas aproximadamente</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-2">
@@ -335,75 +322,37 @@ export default function FichaPage() {
                     <div>
                       <p className="font-medium">Áreas que evalúa</p>
                       <p className="text-sm text-muted-foreground">
-                        Pensamiento matemático, pensamiento analítico, estructura de la lengua y comprensión lectora
+                        Pensamiento matemático, razonamiento lógico-matemático, estructura del lenguaje y comprensión lectora.
                       </p>
                     </div>
                   </li>
                 </ul>
               </div>
 
-              <div>
-                <h3 className="text-lg font-semibold mb-3">Guía de estudio</h3>
-                <p className="text-muted-foreground mb-4">
-                  Te recomendamos prepararte adecuadamente para el examen utilizando los siguientes recursos:
-                </p>
-                <ul className="space-y-4">
-                  <li className="border rounded-lg p-4">
-                    <p className="font-medium">Guía EXANI-II</p>
-                    <p className="text-sm text-muted-foreground mb-2">
-                      Descarga la guía oficial del CENEVAL con ejemplos de preguntas y temas a estudiar.
-                    </p>
-                    <Button variant="outline">Descargar guía</Button>
-                  </li>
-                  <li className="border rounded-lg p-4">
-                    <p className="font-medium">Curso de preparación</p>
-                    <p className="text-sm text-muted-foreground mb-2">
-                      El instituto ofrece un curso de preparación para el examen de admisión.
-                    </p>
-                    <div className="text-sm">
-                      <p>
-                        <strong>Fechas:</strong> Del 20 de mayo al 10 de junio de 2024
-                      </p>
-                      <p>
-                        <strong>Horario:</strong> Sábados de 9:00 a 14:00 hrs.
-                      </p>
-                      <p>
-                        <strong>Costo:</strong> $500.00 MXN
-                      </p>
-                    </div>
-                    <Button variant="outline" className="mt-3">
-                      Inscribirme al curso
-                    </Button>
-                  </li>
-                </ul>
-              </div>
 
               <div>
                 <h3 className="text-lg font-semibold mb-3">Recomendaciones para el día del examen</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
-                    <span>Llega 30 minutos antes de la hora programada</span>
+                    <span>Se recomienda que el sustentante cuente con un equipo de cómputo funcional (de escritorio o portátil) y una conexión estable a internet,
+                      evitando el uso de tabletas o teléfonos celulares.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
-                    <span>Presenta tu ficha de admisión e identificación oficial</span>
+                    <span>Disponer de un espacio cerrado, silencioso y bien iluminado para realizar la evaluación diagnóstica en línea.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
-                    <span>Lleva lápiz del número 2 o 2½, borrador y sacapuntas</span>
+                    <span>Es necesario que el sustentante tenga a la mano el número de folio proporcionado durante el proceso de registro de la ficha, así como su CURP.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
-                    <span>Puedes llevar calculadora básica (no programable, no científica)</span>
+                    <span>El sustentante debe asegurarse de tener una conexión a internet estable y estar preparado 15 minutos antes de la aplicación.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
-                    <span>No se permite el uso de celulares, tabletas o dispositivos electrónicos</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
-                    <span>Desayuna bien y descansa lo suficiente el día anterior</span>
+                    <span>La prueba se abrirá puntualmente a las 9:00 horas, por lo que no es necesario ingresar antes de esa hora.</span>
                   </li>
                 </ul>
               </div>
