@@ -5,10 +5,10 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { toast } from "@/components/ui/use-toast"
 import { Mail, Phone, MapPin, Send, Loader2 } from "lucide-react"
@@ -111,7 +111,15 @@ export default function ContactoPage() {
                         <FormItem>
                           <FormLabel>Nombre(s)</FormLabel>
                           <FormControl>
-                            <Input placeholder="Ingresa tu nombre" {...field} />
+                            <Input
+                              placeholder="Ingresa tu nombre"
+                              {...field}
+                              onKeyPress={(e) => {
+                                if (!/^[a-zA-Z\s]*$/.test(e.key)) {
+                                  e.preventDefault();
+                                }
+                              }}
+                            />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -125,7 +133,15 @@ export default function ContactoPage() {
                         <FormItem>
                           <FormLabel>Apellidos</FormLabel>
                           <FormControl>
-                            <Input placeholder="Ingresa tus apellidos" {...field} />
+                            <Input
+                              placeholder="Ingresa tus apellidos"
+                              {...field}
+                              onKeyPress={(e) => {
+                                if (!/^[a-zA-Z\s]*$/.test(e.key)) {
+                                  e.preventDefault();
+                                }
+                              }}
+                            />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -212,7 +228,6 @@ export default function ContactoPage() {
                             {...field}
                           />
                         </FormControl>
-                        <FormDescription>Sé específico para que podamos ayudarte mejor.</FormDescription>
                         <FormMessage />
                       </FormItem>
                     )}
@@ -285,88 +300,87 @@ export default function ContactoPage() {
                 </p>
               </div>
 
-<div className="border-t pt-4 mt-4">
-  <p className="font-medium mb-2">Redes Sociales</p>
-  <div className="flex gap-4 mt-2">
-    {/* Facebook con link */}
-    <a
-      href="https://www.facebook.com/share/16KBXNF7Lh/"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Facebook"
-    >
-      <Button variant="outline" size="icon">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="lucide lucide-facebook"
-        >
-          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-        </svg>
-      </Button>
-    </a>
-    <a
-  href="https://www.instagram.com/itics.itsoeh?igsh=MXZuY3p0NXd0N2JyMQ=="
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="Instagram"
->
-  <Button variant="outline" size="icon">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="lucide lucide-instagram"
-    >
-      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-    </svg>
-  </Button>
-</a>
+              <div className="border-t pt-4 mt-4">
+                <p className="font-medium mb-2">Redes Sociales</p>
+                <div className="flex gap-4 mt-2">
+                  {/* Facebook */}
+                  <a
+                    href="https://www.facebook.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                  >
+                    <Button variant="outline" size="icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="lucide lucide-facebook"
+                      >
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                      </svg>
+                    </Button>
+                  </a>
+                  
+                  {/* Instagram */}
+                  <a
+                    href="https://www.instagram.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                  >
+                    <Button variant="outline" size="icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="lucide lucide-instagram"
+                      >
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                      </svg>
+                    </Button>
+                  </a>
 
-
-    {/* Google con link */}
-    <a
-      href="https://www.itsoeh.edu.mx/front/#"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Google"
-    >
-      <Button variant="outline" size="icon">
-        {/* Aquí te dejo un ícono simple de Google SVG */}
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="lucide lucide-google"
-        >
-          <path d="M21.35 11.1h-9.17v2.95h5.28c-.23 1.46-1.63 4.28-5.28 4.28-3.18 0-5.77-2.63-5.77-5.87s2.59-5.87 5.77-5.87c1.81 0 3.03.77 3.74 1.44l2.55-2.45C17.68 6.1 15.82 5 13.5 5 8.87 5 5 8.92 5 13.67s3.87 8.67 8.5 8.67c4.91 0 8.15-3.44 8.15-8.3 0-.56-.06-.97-.3-1.24z" />
-        </svg>
-      </Button>
-    </a>
-  </div>
-</div>
-
+                  {/* Google */}
+                  <a
+                    href="https://www.google.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Google"
+                  >
+                    <Button variant="outline" size="icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="lucide lucide-google"
+                      >
+                        <path d="M21.35 11.1h-9.17v2.95h5.28c-.23 1.46-1.63 4.28-5.28 4.28-3.18 0-5.77-2.63-5.77-5.87s2.59-5.87 5.77-5.87c1.81 0 3.03.77 3.74 1.44l2.55-2.45C17.68 6.1 15.82 5 13.5 5 8.87 5 5 8.92 5 13.67s3.87 8.67 8.5 8.67c4.91 0 8.15-3.44 8.15-8.3 0-.56-.06-.97-.3-1.24z" />
+                      </svg>
+                    </Button>
+                  </a>
+                </div>
+              </div>
             </CardContent>
           </Card>
         </div>
